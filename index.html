@@ -4,91 +4,148 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
+	/* Style the tab */
+	.tab {
+	  overflow: hidden;
+	  border: 1px solid #ccc;
+	  background-color: #f1f1f1;
+	}
 
-a:link, a:visited {
-  background-color: white;
-  color: black;
-  border: 2px solid lightgoldenrodyellow;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
+	/* Style the buttons inside the tab */
+	.tab button {
+	  background-color: inherit;
+	  float: left;
+	  border: none;
+	  outline: none;
+	  cursor: pointer;
+	  padding: 14px 16px;
+	  transition: 0.3s;
+	  font-size: 17px;
+	}
 
-a:hover, a:active {
-  background-color: darkcyan;
-  color: white;
-}
+	/* Change background color of buttons on hover */
+	.tab button:hover {
+	  background-color: #ddd;
+	}
+
+	/* Create an active/current tablink class */
+	.tab button.active {
+	  background-color: #ccc;
+	}
+
+	/* Style the tab content */
+	.tabcontent {
+		display: none;
+		padding: 6px 12px;
+		border: 1px solid #ccc;
+		border-top: none;
+	}
+	a:link, a:visited {
+		background-color: white;
+		color: black;
+		border: 2px solid lightgoldenrodyellow;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+	}
+
+	a:hover, a:active {
+		background-color: darkcyan;
+		color: white;
+	}
 </style>
 <head> 
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body style="background-image: url('pic_bg.jpg'); width:100%">
 
-<h2></h2><h1 class="w3-text-yellow">Have a song that you want to see here?</h1>
+	<div class="w3-container">
+		<marquee><h1 class="w3-text-yellow">(*~R@ND0M MU$!C P@GE~*)</h1></marquee>
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSevR1Rh-Tsiu8-zJ6grlgDIj_7SQXXQoT2IEnMk4rgADs3F_w/viewform?usp=sf_link" target="_blank">Click Here</a>
+		<div class="tab">
+  			<button class="tablinks" onclick="openCity(event, 'Music')">Music</button>
+  			<button class="tablinks" onclick="openCity(event, 'MC')">Music Recommendations</button>
+		</div>
 
-<div class="w3-container">
-	<marquee><h1 class="w3-text-yellow">(*~R@ND0M MU$!C P@GE~*)</h1></marquee>
+	<div id="Music" class="tabcontent" style="display: block;">
+		<div class="w3-red" style="display: inline-block;">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/eBGCYiToNEY?si=PIKiTq86ZPys7E7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<h2 class="w3-text-green">The Trick by AJR</h2>
+		</div>
 
-<div jsname="fuce" class="XjRuUc rBG7Lb B28vwe CL9RDd bJ5QHe" aria-label="Replay animation" aria-hidden="false" role="button" tabindex="0" jsaction="vs4iSb" data-ved="2ahUKEwif_8yG3vuEAxXFITQIHS83CAIQ-OIHegQIBxAB"><div jsname="ytkSBd" class="Bm5Y2d" style="width: 34px; height: 34px;"><g-img jsname="nUbhcb" class="tNvsxf cTgcCf" style="width: 238px; height: 34px; left: 0px;"><img src="https://www.google.com/logos/fnbx/ephemeral/confetti_anim_dm.png" class="YQ4gaf zr758c" alt="" width="238" height="34"></g-img></div><g-ripple class="aaU6gd rLdWfe" jscontroller="KbYvUc" jsdata="SMQQFe;_;Bvn+qg" jsaction="yYNR0b;rcuQ6b:npT2md"><div jsname="AHe6Kc" class="MDfoTd" style="opacity: 0.006;"></div><div jsname="yA8yjc" class="hdqIFe"></div></g-ripple><div class="NKGrXd"></div></div>
+		<div class="w3-orange" style="display: inline-block;">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/SsdkvYdSzlg?si=t348HpY7OhxbseAt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+			<h2 class="w3-text-purple">Little Bit of Love By Tom Gernnan</h2>
 
-	<div class="w3-red" style="display: inline-block;">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/eBGCYiToNEY?si=PIKiTq86ZPys7E7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</div>
 
-		<h2 class="w3-text-green">The Trick by AJR</h2>
+		<div class="w3-yellow" style="display: inline-block;">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Fp8msa5uYsc?si=tfxUOEyxBLJ1NKSi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+			<h2 class="w3-text-blue">Ghost By Justin Bieber</h2>
+
+		</div>
+
+		<div class="w3-green" style="display: inline-block;">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Jbch_x5132o?si=f7gbVQNg4FKe51dv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+			<h2 class="w3-text-red">Sunshine by OneRepublic</h2>
+
+		</div>
+
+		<div class="w3-blue" style="display: inline-block;">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/cHHLHGNpCSA?si=8p1ELU8pi9jVCdvh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+			<h2 class="w3-text-yellow">Waiting For Love by Avicii</h2>
+
+		</div>
+
+		<div class="w3-purple" style="display: inline-block;">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/rnFLF0ylZdY?si=Logojxakk8NSIZBx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+			<h2 class="w3-text-orange">Looks Like Me by Dean Lewis</h2>
+
+		</div>
+
+		<div class="w3-red" style="display: inline-block;">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/nfs8NYg7yQM?si=6YmL18EtW7yeaT0P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<h2 class="w3-text-green">Attention by Charile Puth</h2>
+
+		</div>
+
+		<div class="w3-orange" style="display: inline-block;">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/5CUyWJ7UINM?si=Pnh9IEQZyVulM2lb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<h2 class="w3-text-purple">Check Yes, Juliet by We The Kings</h2>
+		</div>
+
+		<div class="w3-yellow" style="display: inline-block;">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/dLrdSC9MVb4?si=q1SYOZSE-w3OG9h9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<h2 class="w3-text-blue">Turn The Lights Off, by Tally Hall</h2>
+
+		</div>
 	</div>
 
-	<div class="w3-orange" style="display: inline-block;">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/SsdkvYdSzlg?si=t348HpY7OhxbseAt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-		<h2 class="w3-text-purple">Little Bit of Love By Tom Gernnan</h2>
-
-	</div>
-
-	<div class="w3-yellow" style="display: inline-block;">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/Fp8msa5uYsc?si=tfxUOEyxBLJ1NKSi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-		<h2 class="w3-text-blue">Ghost By Justin Bieber</h2>
-
-	</div>
-
-	<div class="w3-green" style="display: inline-block;">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/Jbch_x5132o?si=f7gbVQNg4FKe51dv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-		<h2 class="w3-text-red">Sunshine by OneRepublic</h2>
-
-	</div>
-
-	<div class="w3-blue" style="display: inline-block;">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/cHHLHGNpCSA?si=8p1ELU8pi9jVCdvh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-		<h2 class="w3-text-yellow">Waiting For Love by Avicii</h2>
-
-	</div>
-
-	<div class="w3-purple" style="display: inline-block;">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/rnFLF0ylZdY?si=Logojxakk8NSIZBx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-		<h2 class="w3-text-orange">Looks Like Me by Dean Lewis</h2>
-
-	</div>
-
-	<div class="w3-red" style="display: inline-block;">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/nfs8NYg7yQM?si=6YmL18EtW7yeaT0P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-		<h2 class="w3-text-green">Attention by Charile Puth</h2>
-
-	</div>
-
-	<div class="w3-orange" style="display: inline-block;">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/5CUyWJ7UINM?si=Pnh9IEQZyVulM2lb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-		<h2 class="w3-text-green">Check Yes, Juliet by We The Kings</h2>
-
+	<div id="MC" class="tabcontent">
+		<h3 class= "w3-text-blue">Music Recommendations</h3>
+			<a href="https://docs.google.com/forms/d/e/1FAIpQLSevR1Rh-Tsiu8-zJ6grlgDIj_7SQXXQoT2IEnMk4rgADs3F_w/viewform?usp=sf_link" target="_blank">Music Reccommendations</a>
 	</div>
 </div>
-
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
 </body>
 </html>
