@@ -126,16 +126,17 @@
 
 		</div>
 
-	<div class="w3-green" style="display: inline-block;">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/IY8rOSyR5Rw?si=yD96--tIlLeKilT-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-		<h2 class="w3-text-red">Little Talks by of Monsters and Men</h2>
+		<div class="w3-green" style="display: inline-block;">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/IY8rOSyR5Rw?si=yD96--tIlLeKilT-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			<h2 class="w3-text-red">Little Talks by of Monsters and Men</h2>
 
-	</div>
+		</div>
 
-	<div class="w3-blue" style="display: inline-block;">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/SocVqKJsYsA?si=M-zthaddAb26reZh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-		<h2 class="w3-text-yellow">Ship In a Bottle by Fin Argus</h2>
-		
+		<div class="w3-blue" style="display: inline-block;">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/SocVqKJsYsA?si=M-zthaddAb26reZh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			<h2 class="w3-text-yellow">Ship In a Bottle by Fin Argus</h2>
+			
+		</div>
 	</div>
 
 	<div id="MC" class="tabcontent">
@@ -145,27 +146,37 @@
 
 	<h2>Dancin Cat</h2>
 
-	<button onclick="document.getElementById('myImage').src='squish1.jpeg'">Make Em Dance</button>
+	<img id="myImage" src="squish1.jpeg" style="width:100px">
 
-	<img id="myImage" src="pic_bulboff.gif" style="width:100px">
-
-	<button onclick="document.getElementById('myImage').src='squish2.jpeg'">Make Em Dance</button>
+	<button onclick="dance()">Make Em Dance</button>
 
 </div>
 <script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+	var im = 1;
+	function dance() {
+		if (im == 1){
+			im = 2;
+			document.getElementById('myImage').src='squish2.jpeg';
+		}else{
+			im = 1;
+			document.getElementById('myImage').src='squish1.jpeg';
+		}
+	};
+
+	function openCity(evt, cityName) {
+	  var i, tabcontent, tablinks;
+	  tabcontent = document.getElementsByClassName("tabcontent");
+	  for (i = 0; i < tabcontent.length; i++) {
+	    tabcontent[i].style.display = "none";
+	  }
+	  tablinks = document.getElementsByClassName("tablinks");
+	  for (i = 0; i < tablinks.length; i++) {
+	    tablinks[i].className = tablinks[i].className.replace(" active", "");
+	  }
+	  let di = document.getElementById(cityName)
+	  di.style.display = "block";
+	  evt.currentTarget.className += " active";
+	}
 </script>
 </body>
 </html>
