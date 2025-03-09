@@ -150,8 +150,17 @@
 
 	<button onclick="dance()">Make Em Dance</button>
 
+	<p id="time"></p>
+
+
 </div>
 <script>
+
+	var Total_Music = 11;
+	const TSA = 3.50;
+	let Total_Time = Total_Music * TSA;
+	document.getElementById("time").innerHTML = "Total Time Listen: ~ " + Total_Time + " " + "Minutes";
+
 	var im = 1;
 	function dance() {
 		if (im == 1){
@@ -177,6 +186,7 @@
 	  di.style.display = "block";
 	  evt.currentTarget.className += " active";
 	}
+
 </script>
 </body>
 </html>
